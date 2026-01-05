@@ -1,0 +1,16 @@
+VisitID,Title,Name,Date,Prescription,Notes,PaymentAmount,PaymentMethod,TotalFee,PaymentStatus
+b07ac30a-f906-4624-ae9a-df3586b01684,MR,RASHID,2025-12-08,cholostral,,400.00,Mobile,,Paid
+5092c21c-61ea-467c-819f-0c48702832f8,MR,ARSHAD,2025-12-08,rhuxtrox 30,pains,30,Mobile,,
+49a60ab3-8472-43cf-a078-3c573dba1748,MR,RASHID,2025-12-08,arnica,arnica pills,,Due,20.00,Due
+b5574e47-9b63-4f26-976a-667a6c6399b6,MR,RASHID,2025-12-08,cholostral pills,cholostral,20.00,Cash,20.00,Paid
+04b1d4f5-ef1e-4b4a-bffd-793ab74dfd48,MR,RASHID,2025-12-08,painD,pain,10.00,Cash,10.00,Paid
+235b28c0-87d5-4876-adea-a2fc3ec89027,MR,RASHID,2025-12-08,pain D,pain,,Cash,,Due
+990900e4-3bf9-41dd-8495-990d662845fc,MR,RASHID,2025-12-08,legs pain,pain,,Cash,,Due
+6afca2ce-ddca-450b-9c5d-32c2eb7ab51e,MR,RASHID,2025-12-08,hand pain,pain,,Cash,,Due
+658dbd03-7389-4855-a3f0-6bd677446991,MR,RASHID,2025-12-08,dr 1,fever,,Cash,,Due
+9c5a96e6-9bb8-4e8d-acd2-0a4b1985d701,MR,RASHID,2025-12-08,dr 2,dr,,Cash,,Due
+5b0334ca-cc34-442a-b125-b2dd71e672c8,MR,ABUZAR,2025-12-08,DR 1,HEAD ACHE  FEVER,200.00,Mobile,200.00,Paid
+01801a5a-9dfc-4517-adb5-49578e1e3166,MRS,tasneem,2025-12-09,dr1,fever,70.00,Cash,50.00,Paid
+b7ca9498-e920-47d8-81a3-6aa5017fcafa,MR,RASHID,2025-12-09,dr 1,fever,50.00,Cash,50.00,Paid
+68183abf-2a77-43bd-8772-cd8b16321c89,MRS,tasneem,2025-12-09,bell 30,taken,10.00,Cash,10.00,Paid
+e1345d4e-8802-4ff7-8fb3-45873c860134,MRS,tasneem,2025-12-09,dr1,fever,60.00,Cash,60.00,Paid

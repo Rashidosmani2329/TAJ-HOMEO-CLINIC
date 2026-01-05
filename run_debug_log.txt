@@ -1,0 +1,3 @@
+
+--- starting app at 2025-12-09T21:07:43.541111 ---
+created HomeoPatientApp at 2025-12-09T21:07:43.648024

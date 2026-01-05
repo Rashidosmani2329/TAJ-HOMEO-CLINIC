@@ -1,0 +1,5 @@
+pillow
+pytesseract
+# NOTE: pytesseract is a Python wrapper and requires the Tesseract engine installed separately.
+# On Windows: install Tesseract from https://github.com/tesseract-ocr/tesseract/releases
+kivy

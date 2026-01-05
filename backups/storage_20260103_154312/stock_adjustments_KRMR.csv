@@ -1,0 +1,4 @@
+AdjustmentID,MedicineID,Name,Supplier,OldQty,Change,NewQty,Mode,Reason,Date,User
+04fa3f58-477a-4590-88a4-be8122d87fb0,3c338761-2344-4b29-acab-f03817509108,Dr 1,UPENDRA HOMEO,0.00,12.00,12.00,set,stock recvd,2025-12-23 11:29:34,fakhir
+7b094d41-a272-40d5-a48b-448f0a1eef4e,3c338761-2344-4b29-acab-f03817509108,Dr 1,UPENDRA HOMEO,12.00,-9.00,3.00,sale,Sale (visit) to MR kaleem on 2025-12-23,2025-12-23 11:32:00,
+4325f6e3-5031-4c25-8cdf-e4b5c6eadc3d,3c338761-2344-4b29-acab-f03817509108,Dr 1,UPENDRA HOMEO,10.00,-1.00,9.00,sale,Sale (visit) to MR JH on 2025-12-23,2025-12-23 11:35:04,
