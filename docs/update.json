@@ -1,6 +1,6 @@
 {
-  "version": "1.24",
-  "url": "https://your.host/path/TajHomeoApp.exe",
-  "miffi24": "9fddac",
-  "sha256": "e6f1b068662c42b0f130d89dc6f216aa3c1eb272083a21b313d7f01bcb4344f1"
+    "version":  "1.24",
+    "url":  null,
+    "miffi24":  "9fddac",
+    "sha256":  "e6f1b068662c42b0f130d89dc6f216aa3c1eb272083a21b313d7f01bcb4344f1"
 }
