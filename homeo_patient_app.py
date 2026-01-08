@@ -695,6 +695,7 @@ class HomeoPatientApp(tk.Tk):
 
         _add_tb('Search', self.search_name, icon_key='search', short='Srch')
         _add_tb('Clear', self.clear_search, icon_key='clear', short='Clr')
+        _add_tb('View All Patients', lambda: self.view_all_patients(), icon_key=None, short='All')
         # Payments summary and invoice actions
         _add_tb('Payments', self.open_payments_summary_window, icon_key='payments', short='Pay')
         _add_tb('Add Invoice', lambda: self.open_add_invoice(), icon_key='add_invoice', short='Inv+')
@@ -3201,6 +3202,74 @@ class HomeoPatientApp(tk.Tk):
         # clear search and hide patient list until the user searches again
         self.require_search_before_show = True
         self.refresh_tree([])
+
+    def view_all_patients(self):
+        """Load and display all patients from all clinics and current in-memory list.
+
+        This method ignores the "require_search_before_show" landing behaviour
+        and shows a combined, de-duplicated list of patients across clinics.
+        """
+        results = []
+        clinics = getattr(self, 'clinics', []) or [getattr(self, 'current_clinic', '')]
+        for c in clinics:
+            if not c:
+                continue
+            path = DATA_TEMPLATE.format(clinic=c)
+            if not os.path.exists(path):
+                continue
+            try:
+                with open(path, 'r', newline='', encoding='utf-8') as f:
+                    rdr = csv.DictReader(f)
+                    if not rdr.fieldnames:
+                        f.seek(0)
+                        reader = csv.reader(f)
+                        for r in reader:
+                            if len(r) < 2:
+                                continue
+                            title = r[0].strip()
+                            name = r[1].strip()
+                            age = r[2].strip() if len(r) > 2 else ''
+                            address = r[3].strip() if len(r) > 3 else ''
+                            mobile = r[4].strip() if len(r) > 4 else ''
+                            addr = f"{address} [{c}]" if address else f"[{c}]"
+                            results.append([title, name, age, addr, mobile])
+                    else:
+                        for r in rdr:
+                            title = (r.get('Title') or '').strip()
+                            name = (r.get('Name') or '').strip()
+                            age = (r.get('Age') or '').strip()
+                            address = (r.get('Address') or '').strip()
+                            mobile = (r.get('Mobile') or '').strip()
+                            addr = f"{address} [{c}]" if address else f"[{c}]"
+                            results.append([title, name, age, addr, mobile])
+            except Exception:
+                continue
+
+        # include any in-memory patients (mark as current clinic)
+        try:
+            for p in self.patients:
+                title = (p[0] or '').strip()
+                name = (p[1] or '').strip()
+                age = str(p[2]) if len(p) > 2 else ''
+                address = (p[3] if len(p) > 3 else '')
+                mobile = (p[4] or '').strip() if len(p) > 4 else ''
+                addr = f"{address} [{getattr(self,'current_clinic','')}]" if address else f"[{getattr(self,'current_clinic','')}]"
+                results.append([title, name, age, addr, mobile])
+        except Exception:
+            pass
+
+        # de-duplicate by (name,mobile,clinic)
+        seen = set()
+        unique = []
+        for r in results:
+            key = (r[1].lower(), r[4], r[3])
+            if key in seen:
+                continue
+            seen.add(key)
+            unique.append(r)
+
+        self.require_search_before_show = False
+        self.refresh_tree(unique)
 
     def delete_selected(self):
         selected = self.tree.selection()
