@@ -1,0 +1,3 @@
+AdjustmentID,MedicineID,Name,Supplier,OldQty,Change,NewQty,Mode,Reason,Date,User
+c1712cbb-5900-4bdd-9f8b-dcbcefac88ff,3c338761-2344-4b29-acab-f03817509108,Dr 1,UPENDRA HOMEO,0.00,-1.00,-1.00,sale,Sale (visit) to MR mateen on 2026-01-08,2026-01-08 16:55:45,
+8508ddba-ad43-40a6-a816-c3bd8831bf2b,7500039d-3b53-45f0-81cb-0aceea731ba5,Belladona 30,SANTI HOMEO,0.00,-1.00,-1.00,sale,Sale (visit) to MR mateen on 2026-01-08,2026-01-08 16:55:45,

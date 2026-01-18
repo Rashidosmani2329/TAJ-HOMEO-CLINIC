@@ -1,0 +1,3 @@
+VisitID,Title,Name,Date,Prescription,Notes,PaymentAmount,PaymentMethod,TotalFee,PaymentStatus
+36d08f4f-56a5-4375-8bff-9c8ad5c5efeb,MR,mateen,2026-01-08,"Dr 1  Qty:1.0  Price:0.00
+Belladona 30  Qty:1  Price:30.00","cough, fever",30.00,Mobile,30.00,Paid

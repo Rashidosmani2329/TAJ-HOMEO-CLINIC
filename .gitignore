@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.DS_Store
+env/
+venv/
+.vscode/
+build/
+dist/
+dist_*/
+backups/
+*.exe
+*.exe.bak
+*.log
+*.tmp
+*.bak
+*.pyz
+storage_*/
