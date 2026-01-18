@@ -1,3 +1,29 @@
+# TAJ-HOMEO-CLINIC
+
+Simple homeopathy clinic management app (Kivy + Python).
+
+Quick start
+
+- Create a virtualenv and activate it.
+- Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+- Run the app:
+
+```bash
+python homeo_kivy_app.py
+```
+
+CI
+
+This repository includes a basic GitHub Actions workflow at `.github/workflows/ci.yml` that installs dependencies and runs a syntax check and tests if present.
+
+License
+
+Add your license here.
 # Homeo Doctor — Patient Registry (Python)
 
 Simple Tkinter app for a homeopathic doctor to add patient details.
