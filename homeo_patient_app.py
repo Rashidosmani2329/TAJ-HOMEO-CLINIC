@@ -18,8 +18,10 @@ APP_VERSION = '1.23'
 # URL returning JSON update metadata examples:
 # - SHA256: {"version":"1.24","url":"https://.../TajHomeoApp_portable_v1.24.exe","sha256":"..."}
 # - MIFFI24: {"version":"1.24","url":"https://.../TajHomeoApp_portable_v1.24.exe","miffi24":"0012ab"}
-# Leave blank to disable automatic online checks. Replace <user> with your GitHub username.
-UPDATE_METADATA_URL = 'https://rashidosmani2329.github.io/TajHomeoApp/update.json'
+# Leave blank to disable automatic online checks. By default this points to
+# the raw `update.json` in the repository `main` branch so the app can fetch
+# metadata directly. Change if you host update metadata elsewhere.
+UPDATE_METADATA_URL = 'https://raw.githubusercontent.com/Rashidosmani2329/TAJ-HOMEO-CLINIC/main/update.json'
 # winsound is Windows-only; use if available for beep
 try:
     import winsound
